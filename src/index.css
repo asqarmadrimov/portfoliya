@@ -1,13 +1,136 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  background-color: #1E1E1E;
+  color: white;
+  font-family: sans-serif;
+  transition: all 1.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  border-bottom: solid 2px gray;
+  padding-bottom: 0 !important;
+}
+
+.header__logo {
+  text-decoration: none; 
+  color: white !important;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.A {
+  margin-left: -25px;
+  color: rgb(83, 82, 82);
+}
+
+.header__item-link {
+  color: white !important;
+}
+
+.header__item-link:hover {
+  color: rgb(83, 82, 82) !important;
+  border-bottom: solid 1px rgb(73, 119, 55);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__item {
+  list-style: none;
+}
+
+.header__item ~ .header__item {
+  margin-left: 50px;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+.home, .aboute, .projects, .contacts {
+  background-image: url('./Utils/Img/images.jpg');
+  background-repeat: no-repeat;
+  background-position: 100%;
+  background-size: cover;
+}
+
+.home__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home__text {
+  color: #a3a1a1;
+}
+
+.home__img {
+  max-width: 480px;
+  max-height: 500px;
+}
+
+.card:hover {
+  box-shadow: 8px 10px 6px #585656 !important;
+  opacity: 75% !important;
+}
+
+.card-title {
+  font-size: 100px !important;
+}
+
+.card-title2 {
+  font-size: 60px !important;
+  margin-left: -30px;
+  opacity: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+  .home__img {
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .navbar {
+    display: none;
+  }
+
+  .header__hamburger {
+    display: block;
+  }
+
+  .home__inner {
+    display: block;
+    text-align: center;
+  }
+
+  .home__img {
+    margin-right: 50px;
+    margin-left: -50px;
+    max-width: 380px;
+    max-height: 380px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .home__img {
+    margin-right: 50px;
+    margin-left: -50px;
+    max-width: 300px;
+    max-height: 300px;
+  }
 }
